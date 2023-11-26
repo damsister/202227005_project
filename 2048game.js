@@ -24,7 +24,20 @@ function init(){
         var rand = parseInt(Math.random()*16);
         var y = parseInt(rand / 4);
         var x = rand % 4;
-        if(board[y][x]==0) board[y][x]=getNewNum();
+        if(board[y][x]==0) 
+        { 
+            board[y][x]=getNewNum();
+            // // 첫 번째 타일은 파란색 클래스 추가
+            // if (i === 0) {
+            //     var cell = document.getElementById(tableID[y][x]);
+            //     cell.classList.add('blue');
+            // }
+            // // 두 번째 타일은 노란색 클래스 추가
+            // else {
+            //     var cell = document.getElementById(tableID[y][x]);
+            //     cell.classList.add('yellow');
+            // }
+        }
         else i--;
     }
     update();
@@ -42,62 +55,73 @@ function update(){
     document.getElementById("score").innerHTML=score;
 }
 
+function update1(){
+    for(var i=0;i<4;i++){
+        for(var j=0;j<4;j++){
+            var cell = document.getElementById(tableID[i][j]);
+            cell.innerHTML = board[i][j]==0?"":board[i][j];
+            coloring(cell);
+        }
+    }
+    document.getElementById("score1").innerHTML=score;
+}
+
 // 칸 색칠
 function coloring(cell){
     var cellNum = parseInt(cell.innerHTML);
     switch(cellNum){
         case 0:
         case 2:
-            cell.style.color="#684A23";
-            cell.style.background="#FBEDDC";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 4:
-            cell.style.color="#684A23";
-            cell.style.background="#F9E2C7";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 8:
-            cell.style.color="#684A23";
-            cell.style.background="#F6D5AB";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 16:
-            cell.style.color="#684A23";
-            cell.style.background="#F2C185";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 32:
-            cell.style.color="#684A23";
-            cell.style.background="#EFB46D";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 64:
-            cell.style.color="#FFFFFF";
-            cell.style.background="#EBA24A";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 128:
-            cell.style.color="#FFFFFF";
-            cell.style.background="#E78F24";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 256:
-            cell.style.color="#FFFFFF";
-            cell.style.background="#E87032";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 512:
-            cell.style.color="#FFFFFF";
-            cell.style.background="#E85532";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 1024:
-            cell.style.color="#FFFFFF";
-            cell.style.background="#E84532";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         case 2048:
-            cell.style.color="#FFFFFF";
-            cell.style.background="#E83232";
+            cell.style.color="#000000";
+            cell.style.background="#FFFFFF";
             break;
         default:
             if(cellNum>2048){
-                cell.style.color="#FFFFFF";
-                cell.style.background="#E51A1A";
+                cell.style.color="#000000";
+                cell.style.background="#FFFFFF";
             }
             else{
-                cell.style.color="#684A23";
+                cell.style.color="#000000";
                 cell.style.background="#FBEDDC";
             }
             break;
@@ -194,7 +218,7 @@ function generate(){
 // 숫자 생성 확률
 function getNewNum(){
     var rand = parseInt(Math.random()*10);
-    if(rand==0) return 4;
+    if(rand==0) return 2;
     return 2;
 }
 

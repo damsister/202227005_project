@@ -1,0 +1,38 @@
+@media all and (min-width:320px)
+{
+    *
+    {
+        margin: 0;
+    }
+    .bg_div
+    {
+        width: 500px;
+        height: 953px;
+    }
+    .bg_img
+    {
+        background-image: url("../202227005_project/img/Title.png");
+        background-repeat: no-repeat;
+        background-size: 500px 953px;
+    }
+    #bt1
+    {
+        position: absolute;
+        top: 660px;
+        right: 50px;
+        width: 150px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: rgb(89, 175, 255);
+    }
+    #bt2
+    {
+        position: absolute;
+        top: 750px;
+        right: 50px;
+        width: 150px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: rgb(255, 216, 79);
+    }
+}

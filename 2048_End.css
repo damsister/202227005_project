@@ -1,0 +1,33 @@
+body
+{
+    background-image: linear-gradient(#59AFFF, #FFD84F);
+    height: 937px;
+}
+#win
+{
+    text-align: center;
+    padding: 260px 0;
+    font-size: 40px;
+}
+#bt1
+    {
+        position: absolute;
+        top: 50%;
+        left: 40%;
+        margin: -25px 0 0 -25px;
+        width: 150px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: rgb(89, 175, 255);
+    }
+    #bt2
+    {
+        position: absolute;
+        top: 60%;
+        left: 40%;
+        margin: -25px 0 0 -25px;
+        width: 150px;
+        height: 60px;
+        border-radius: 30px;
+        background-color: rgb(255, 216, 79);
+    }

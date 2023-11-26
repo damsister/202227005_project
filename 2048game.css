@@ -1,4 +1,5 @@
-td{
+td
+{
     border: 2px solid #372c25;
     border-radius: 9px;
     text-align: center;
@@ -7,50 +8,102 @@ td{
     font-weight: bold;
     height: 70px;
     width: 70px;
-    color: #684A23;
-    background-color: #FBEDDC;
+    color: #000000;
+    background-color: white;
 }
-p{
+p
+{
     color: white;
     vertical-align: top;
 }
-body{
-    background-color: #372C25;
+body
+{
+    background-image: linear-gradient(#59AFFF, #FFD84F);
+    height: 910px;
 }
-#title{
+
+/* .blue {
+    background-color: blue;
     color: white;
-    font-size: 48px;
+  }
+  
+  .yellow {
+    background-color: yellow;
+    color: black;
+  } */
+#title
+{
+    color: white;
+    font-size: 30px;
     padding: 0px;
     margin: 0px;
 }
-#titleBar{
-    margin-left: 70px;
+#titleBar
+{
+    margin-left: 148px;
     margin-top: 35px;
     height: 70px;
 }
-#titlePad{
+#titlePad
+{
     width: 148px;
     height: 35px;
     background-color: #372C25;
     margin: 0px;
 }
-#scorePad{
+
+#scoreBar
+{
+    margin-left: 16px;
+    margin-top: 35px;
+    height: 70px;
+}
+#scorePad
+{
     width: 148px;
     height: 35px;
     background-color: #46382E;
     padding: 0px;
     margin: 0px;
 }
-#scoreType{
+#scoreType
+{
     font-size: 14pt;
     margin: 0px;
     color: #715541;
 }
-#score{
+#score
+{
     font-size: 28pt;
     margin: 0px;
     color: white;
 }
+
+#scoreBar1
+{
+    float: right;
+    margin-right: 16px;
+    margin-top: 35px;
+    height: 70px;
+}
+#scorePad1{
+    width: 148px;
+    height: 35px;
+    background-color: #46382E;
+    padding: 0px;
+    margin: 0px;
+}
+#scoreType1{
+    font-size: 14pt;
+    margin: 0px;
+    color: #715541;
+}
+#score1{
+    font-size: 28pt;
+    margin: 0px;
+    color: white;
+}
+
 #board{
     margin-left: 70px;
     margin-top: 5px;
