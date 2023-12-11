@@ -1,0 +1,150 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: linear-gradient(#59AFFF, #FFD84F);
+}
+
+#app {
+  text-align: center;
+}
+
+form {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#message {
+  margin-top: 16px;
+  color: red;
+}
+
+
+/* 이거 2048 css */
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+  grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+  background-color: #CCC;
+  gap: var(--cell-gap);
+  border-radius: 1vmin;
+  padding: var(--cell-gap);
+  position: relative;
+}
+
+#current-turn {
+  position: absolute;
+  top: 30px; /* 위로 이동 */
+  left: 50%;
+  transform: translateX(-50%); /* 가로 방향 가운데 정렬 */
+  color: white;
+  font-size: 4vmin; /* 원하는 크기로 조절 */
+}
+
+#player-scores { /* 추가된 부분: 스코어를 표시할 위치 */
+  position: absolute;
+  top: 80px; /* 위로 이동 */
+  left: 30%;
+  transform: translateX(-50%); /* 가로 방향 가운데 정렬 */
+  color: white;
+  font-size: 3vmin; /* 원하는 크기로 조절 */
+}
+#player-scores2 { /* 추가된 부분: 스코어를 표시할 위치 */
+  position: absolute;
+  top: 80px; /* 위로 이동 */
+  left: 70%;
+  transform: translateX(-50%); /* 가로 방향 가운데 정렬 */
+  color: white;
+  font-size: 3vmin; /* 원하는 크기로 조절 */
+}
+
+.cell {
+  background-color: #AAA;
+  border-radius: 1vmin;
+}
+
+.tile {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: var(--cell-size);
+  height: var(--cell-size);
+  /* background-color: red; */
+  border-radius: 1vmin;
+  top: calc(var(--y) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  left: calc(var(--x) * (var(--cell-size) + var(--cell-gap)) + var(--cell-gap));
+  font-weight: bold;
+  background-color: hsl(60, 100%, 50%);
+  color: hsl(200, 25%, var(--text-lightness));
+  animation: show 200ms ease-in-out;
+  transition: 100ms ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    opacity: .5;
+    transform: scale(0);
+  }
+}
+
+/* selct 화면 css */
+#player-selection {
+display: flex;
+gap: 20px;
+}
+
+.player-box {
+width: 100px;
+height: 100px;
+display: flex;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+font-size: 2vmin;
+}
+
+#player1-box {
+background-color: yellow;
+}
+
+#player2-box {
+background-color: blue;
+}
